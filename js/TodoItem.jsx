@@ -20,6 +20,10 @@ export function TodoItem ({props, createEventHandler}) {
     editing.map(bool => bool ? `editing` : ``)
   ]
 
+  // withLatestFrom はドキュメントが理解しやすい
+  // https://github.com/Reactive-Extensions/RxJS/blob/8f12f812d497acf639588e90f74d504a9fc801ec/doc/api/core/operators/withlatestfrom.md
+  // (_, t) => t は以下のこと。
+    // function (_, t) { return t; }
   toggleComplete
     .withLatestFrom(todo, (_, t) => t)
     .subscribe(Actions.toggleTodo)
