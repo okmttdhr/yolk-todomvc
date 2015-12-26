@@ -1,3 +1,5 @@
+// なぜこのファイルだけ分離したのかわからない。
+
 import Immutable from 'immutable'
 
 export function createTodo (label = '', completed = false) {

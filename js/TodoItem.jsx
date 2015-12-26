@@ -1,3 +1,6 @@
+// このファイル、なんか行数が多いが、メソッドがいくつかあるというだけで、
+// やっていることは、単純にメソッドを登録してsubscribeしてるだけ
+
 import {h} from 'yolk'
 
 import {Actions} from './Actions.js'
